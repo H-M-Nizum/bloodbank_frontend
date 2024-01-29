@@ -1,3 +1,5 @@
+// ################# Load and display all type of blood stock ###################
+
 const loadbloodstock = () => {
     fetch("https://lifesafe-bank.onrender.com/blood/list/")
     .then((res) => res.json())
@@ -37,3 +39,48 @@ const displaybloodstockData = (blood) => {
 
 loadbloodstock()
 
+// ############################ contact us section ###############################
+
+function submitForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    const data = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message
+    };
+
+    fetch('https://lifesafe-bank.onrender.com/patient/contact/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // document.getElementById('confirmationMessage').innerText = data;
+        Swal.fire({
+            title: "Congrate",
+            text: data,
+            icon: "success",
+            confirmButtonText: 'ok'
+          });
+      
+    })
+    .catch(error => {Swal.fire({
+        title: "Oops...",
+        text: error,
+        icon: "error",
+        confirmButtonText: 'ok'
+      });
+    });
+}
+
+// function getCookie(name) {
+//     const value = `; ${document.cookie}`;
+//     const parts = value.split(`; ${name}=`);
+//     if (parts.length === 2) return parts.pop().split(';').shift();
+// }
