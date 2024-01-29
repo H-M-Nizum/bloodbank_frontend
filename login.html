@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- Add css Link -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- swiffyslider cdn css link for carousel -->
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <style>
+        body{
+    background-color:white;
+}
+.login-container{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items:center;
+    width:75%;
+    margin: auto;
+}
+.input{
+    padding: 15px 25px;
+    border: none;
+    margin: 10px;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 5px;
+}
+.submit-btn{
+    padding: 15px 25px;
+    width:85%;
+    margin: auto;
+    border: none;
+    background-color: rgb(43, 121, 121);
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+    </style>
+
+  </head>
+  
+  <body>
+    <!-- navbar section start -->
+    <section class=" mb-5 pb-5">
+        <nav  class="navbar navbar-expand-lg fixed-top mb-5 ">
+            <div class="container-fluid ">
+              <div class="d-flex align-items-center gap-1 ms-5">
+                <div><img style="width: 60px; height: 60px; border-radius: 30px; box-shadow: 0 4px 8px 0 rgba(250, 249, 249, 0.726), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="img/logo.jpg" alt="logo"></div>
+                <div><h1 style="font-family: Stencil Std, fantasy;" class="navbar-brand text-white">Lifesafe Bank</h1></div>
+              </div>
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon navbar-toggler-icon-white"></span>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">About</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="contact_us.html" >Contact_us</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="registration.html">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="login.html">login</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </section>
+    <!-- navbar section end -->
+
+
+    <div class="login-container">
+      <div class="col-md-6">
+        <h1 class="title mt-5">Please Login</h1>
+        <form action="">
+          <input
+            value="Rahim"
+            id="login-username"
+            type="text"
+            class="input"
+            placeholder="username"
+            required
+          />
+          <input
+            id="login-password"
+            type="password"
+            class="input"
+            placeholder="password"
+            required
+            value="abcd1234%"
+           
+          />
+          <button onclick="handleLogin(event)"  class="submit-btn">Login</button>
+          <br>
+          <p class="text-center"><a href="registration.html">Go to Registration page</a></p>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <img class="w-100" src="img/login.jpg" alt="" />
+      </div>
+    </div>
+
+   
+    <!-- script tag from here  -->
+    <script src="app.js"></script>
+    <script src="auth.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"
+      integrity="..."
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </body>
+</html>
