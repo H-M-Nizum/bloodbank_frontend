@@ -12,3 +12,15 @@ body{
     background-color: #fff; /* Set the background color to white */
     border: 1px solid #fff; /* Set a white border */
 }
+
+.main-footer{
+    background-color: rgb(48, 46, 46);
+    color: white;
+}
+.main-footer ul li a, .main-footer ul li {
+    color: #999;
+    text-decoration: none;
+}
+.main-footer ul li a:hover{
+    color: red;
+}

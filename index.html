@@ -9,12 +9,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
 
+    <!-- frontassawm -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="style.css">
 
+    
 </head>
 <body>
     <!-- navbar section start -->
-    
     <section class=" mb-5 pb-5">
         <nav  class="navbar navbar-expand-lg fixed-top mb-5 ">
             <div class="container-fluid ">
@@ -51,18 +54,16 @@
             </div>
           </nav>
     </section>
-
     <!-- navbar section end -->
-
 
     <!------------------------------ Main section start  ----------------------------->
 
     <!-- banar section start -->
-    <div class="container  pt-5">
+    <div class="container   pt-5">
       <div class="row align-items-center gap-5">
-        <div class="col-md-7">
+        <div class="col-md-7 m-auto ">
           <div class="swiffy-slider slider-item-ratio slider-item-ratio-16x9 slider-nav-animation slider-nav-animation-fadein" id="swiffy-animation">
-            <ul class="slider-container" id="container1">
+            <ul  class="slider-container" id="container1">
                 <li id="slide1" class=""><img style="width: 100%;" class="w-100" src="img/b5.jpg" alt="..." loading="lazy"></li>
                 <li id="slide2" class="slide-visible"><img src="img/b2.jpg" alt="..." loading="lazy"></li>
                 <li id="slide3"><img src="img/b3.jpg" alt="..." loading="lazy"></li>
@@ -84,16 +85,292 @@
             </div>
         </div>
         </div>
-        <div class="col-md-4">
+       <div class="col-md-4">
           <h2>Emergency Blood Shortage</h2>
           <p>Blood donors are urgently needed now to help ensure patients at hospitals across the country continue to receive critical medical care.To ensure the safety of both patients and donors, these are some of the requirements donors must meet to be eligible to donate blood based on their donation type.</p>
-        </div>
+        </div> 
       </div>
     </div>
-
     <!-- banar secton end -->
+
+    <!-- Learn about donation section start -->
+    <div class="container mt-5">
+      <div class='text-center typeHeading pb-2 pt-5'>
+        <h1 class='learnAbout'>Learn About Donation</h1>
+      </div>
+      <div class='row align-items-center pt-5 gap-5'>
+        <div class="wow col-md-5 rotateInDownRight text-center" data-wow-delay="0ms" data-wow-duration="1000ms">
+          <!-- <img src='assets/donationFact.jpg'></img> -->
+          <picture>
+  
+            <img class="w-100" src='img/b1.jpg' alt='One Donation Can save upto three lives'>
+          </picture>
+          <blockquote>
+            <p style='font-family:oswald'>After donating blood, the body works to replenish the blood loss. This
+              stimulates the production of new blood cells and in turn, helps in maintaining good health.
+            <p>
+          </blockquote>
+  
+          <button onclick="window.location='/BLDAHIMS/bloodbank/nearbyBBRed.cnt'"
+            class='btn btn-danger svcNearBy hvr-sweep-to-right '><i class='fa fa-tint'></i>&nbsp; Donate Now</button>
+          <br><br>
+        </div>
+  
+  
+        <div class='col-md-6 text-center' style="font-size: 1.5rem;">
+          <table class="table table-responsive  " >
+            <tbody>
+              <tr>
+                <th colspan="3" style='color:white;background-color:red;'>Compatible Blood Type Donors</th>
+              </tr>
+              <tr>
+                <td><b>Blood Type</b></td>
+                <td><b>Donate Blood To</b></td>
+                <td><b>Receive Blood From</b></td>
+              </tr>
+              <tr>
+                <td><span style="color: #961e1b;"><b>A+</b></span></td>
+                <td>A+ AB+</td>
+                <td>A+ A- O+ O-</td>
+              </tr>
+              <tr>
+                <td><span style="color: #961e1b;"><b>O+</b></span></td>
+                <td>O+ A+ B+ AB+</td>
+                <td>O+ O-</td>
+              </tr>
+              <tr>
+                <td><span style="color: #961e1b;"><b>B+</b></span></td>
+                <td>B+ AB+</td>
+                <td>B+ B- O+ O-</td>
+              </tr>
+              <tr>
+                <td><span style="color: #961e1b;"><b>AB+</b></span></td>
+                <td>AB+</td>
+                <td>Everyone</td>
+              </tr>
+              <tr>
+                <td><span style="color: #961e1b;"><b>A-</b></span></td>
+                <td>A+ A- AB+ AB-</td>
+                <td>A- O-</td>
+              </tr>
+              <tr>
+                <td><span style="color: #961e1b;"><b>O-</b></span></td>
+                <td>Everyone</td>
+                <td>O-</td>
+              </tr>
+              <tr>
+                <td><span style="color: #961e1b;"><b>B-</b></span></td>
+                <td>B+ B- AB+ AB-</td>
+                <td>B- O-</td>
+              </tr>
+              <tr>
+                <td><span style="color: #961e1b;"><b>AB-</b></span></td>
+                <td>AB+ AB-</td>
+                <td>AB- A- B- O-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+      </div>
+    </div>
+    <!-- Learn about donation section end -->
+
+    <!-- blood stock section start -->
+    <div class="container mt-5">
+      <div>
+        <h3 class="text-center text-bg-danger p-3  mb-5 mt-5">Available Blood Per Group</h3>
+      </div>
+      <div class="swiffy-slider slider-item-show2 slider-nav-sm slider-nav-page slider-item-snapstart slider-item-nogap slider-nav-round slider-nav-dark slider-indicators-sm slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-slideup slider-item-last-visible">
+        <div class="slider-container" id="blood_stock">
+            <!--#### data come form app.js  ####-->
+        </div>
+    
+        <button type="button" class="slider-nav" aria-label="Go left"></button>
+        <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+    
+        <div class="slider-indicators d-md-none">
+            <button class="" aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide" class=""></button>
+            <button aria-label="Go to slide"></button>
+            <button aria-label="Go to slide" class="active"></button>
+        </div>
+    </div>
+    </div>
+    <!-- blood stock section end -->
+
+    <!-- next section start -->
+    <div class='row donationTypes pt-5 mt-5 p-3' style="font-size: 1.5rem; background-color: #F3F4F4;" >
+      <div class='col-md-12  donationTypeInfoWindow text-center' > 
+        <header class="typeHeading">
+          <h1 class="pb-3">Types of donation</h1>
+        </header>
+        <!-- Content -->
+        <div class="content">
+          <p style="text-align: center;" class="fs-6">The average human body contains about five liters of blood, which is made of several cellular
+            and non-cellular components such as <strong>Red blood cell</strong>, 
+             <strong>Platelet</strong>, and <strong>Plasma</strong>.</p>
+          <p style="text-align: center; font-family:oswald;" class="fs-5"><small>Each type of component has its unique properties and can be used for different
+                                           indications. The donated blood is separated into these components
+                                           by the blood centre and one donated unit can save upto four lives depending on the number of
+                                            components separated from your blood.</small></p>
+
+        </div>
+        <br>
+        <hr>
+        <br>
+      
+        <div class='row tabInfo' id='wholeBlood'>
+          <div class='col-md-4 border-end border-4'>
+            <h3>What is it?</h3>
+            <p class="fs-6">
+              Blood Collected straight from the donor into a blood bag and mixed with an anticoagulant is
+called as whole blood. This collected whole blood is then centrifuged and red cell, platelets and
+plasma are separated. The separated Red cells are mixed with a preservative to be called as
+packed red blood cells.</p>
+            <h3>Who can donate?</h3>
+            <p class="fs-6">You need to be 18-65 years old, weight 45kg or more and be fit and healthy.</p>
+          </div>
+
+          <div class='col-md-4 infoContent border-end border-4' >
+            <h3>User For?</h3>
+            <p class="fs-6">
+             Correction of severe anemia in a number of conditions and blood loss in case of child birth,
+              surgery or trauma settings.</p>
+            <h3>Lasts For?</h3>
+            <p class="fs-6">Red cells can be stored for 42 days at 2-6 degree celsius.</p>
+          </div>
+
+          <div class='col-md-4 '>
+            <h3>How long does it take to donate?</h3>
+            <p class="fs-6">15-30 minutes to donate.including the pre-donation check-up.</p>
+            <h3>How often can I donate?</h3>
+            <p class="fs-6">Male donors can donate again after 90 days and female donors can donate again after 120 days.</p>
+          </div>
+        </div>
+
+       
+
+        <br><br>
+
+        <button type='button'
+          style='border-radius:0px' class='btn-lg btn btn-danger svcNearBy hvr-sweep-to-right '>Find Nearest Blood
+          Bank To Donate</button>
+        <br><br>
+      </div>
+    </div>
+    <!-- next section end -->
+
     <!------------------------------ Main section end  ----------------------------->
 
+
+    <!----------------------- Footer section start ----------------------->
+
+    <footer class="main-footer p-5">
+      <!--Footer Upper-->
+      <!--Footer Lower-->
+      <div class="footer-lower">
+        <div class="auto-container sitemap">
+          <div class="row clearfix">
+            <div class='col-md-3 col-sm-12 col-xs-12  wow bounceInLeft'>
+              <h3 class='text-left'>Looking for Blood</h3>
+              <ul style='line-height:165%; list-style: none;'>
+                <li><a  href='#'>Blood Availability</a></li>
+                <li><a  href='#'>Blood Bank Directory</a></li>
+                <li><a  href='#'>Thalassemia Request</a></li>
+              </ul>
+            </div>
+            <div class='col-md-3 col-sm-12 col-xs-12  wow bounceInLeft'>
+              <h3 class='text-left'>Want to Donate Blood</h3>
+              <ul style='line-height:165%; list-style: none;'>
+                <li><a  href='#'>Blood Donation Camps</a></li>
+                <li><a  href='#'>Donor Login</a></li>
+                <li style="display: none;"><a href="#">Voluntary Donor Group</a></li>
+                <li><a  href='#'>About Blood Donation</a></li>
+                <li><a  href="#" title="Register VBD Camp"
+                    href="#">Register VBD Camp</a></li>
+
+
+              </ul>
+            </div>
+            <div class='col-md-3 col-sm-12 col-xs-12  wow bounceInLeft'>
+              <h3 class='text-left'>Blood Bank Login</h3>
+              <ul style='line-height:165%; list-style: none;'>
+                <li><a href='#'>eRaktkosh Login</a></li>
+                <li><a href='#'>Add your Blood Bank</a>
+                </li>
+              </ul>
+            </div>
+            <div class='col-md-3 col-sm-12 col-xs-12  wow bounceInLeft'>
+              <h3 class='text-left'>About Us</h3>
+              <ul style='line-height:165%; list-style: none;'>
+                <li><a  href='#'>About eRaktkosh</a></li>
+                <li><a  title="All Notifications" href="#">Notifications</a></li>
+                <li><a title="Eraktkosh FAQs" href="#">Eraktkosh FAQs</a></li>
+                <li><a href='#'>Gallery</a></li>
+                <li><a href="#" title="Video gallery">Video Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#" title="Mobile Apps">Mobile Apps</a></li>
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="">
+            <div class="row clearfix ps-5 pe-5 pt-5">
+              <!--Footer Logo-->
+              <div class="col-md-3 col-sm-6 col-xs-12 footer-logo wow bounceInLeft text-center" data-wow-delay="200ms"
+                data-wow-duration="1500ms">
+                <div class='col-md-12 col-xs-12'> <a rel="noopener" href="http://www.mohfw.gov.bd/" target='_blank'> <img
+                      src="img/hm6.png" style='float:left; width: 200px;'
+                      alt="Ministry of health and family welfare"></a></div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 col-xs-12 footer-logo wow bounceInRight text-center"
+                data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class='col-md-12 col-xs-12'> <a href='https://bangladesh.gov.bd/index.php' target='_blank' rel="noopener"> <img
+                      src="img/hm4.jpg" style="width: 120px; height: 120px; border-radius: 60px;"  alt="National Portal of Bangladesh"></a></div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 col-xs-12 footer-logo wow bounceInBottom text-center"
+                data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class='col-md-12 col-xs-12'>
+                  <a href='https://dghs.gov.bd/' target='_blank' rel="noopener">
+                    <img style="width: 120px;height: 120px; border-radius: 60px;" src="img/hm3.jpg"
+                      alt="National Health Portal"></a>
+                </div>
+              </div>
+
+
+              <div class="col-md-3 col-sm-6 col-xs-12 footer-logo wow bounceInRight text-center"
+                data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class='col-md-12 col-xs-12'><a href='https://bdrcs.org/donate-blood/' target='_blank' rel="noopener"></a> <img
+                    src="img/hm5.png" style="height: 120px; width: 120px; border-radius: 60px;" alt="Red Crescent"></div>
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <hr>
+            <div class="row">
+              <div class="col-lg-6 col-md-12 text-center m-auto">
+                  <div style="color: #999999;" class="copyright_conent">
+                      <p>Copyright © 2023 <a id="Life" href="https://lifetech-tution.onrender.com/">H.M.NIZUM</a>. All Right Reserved.</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+    <!----------------------- Footer section end ----------------------->
+    
     <!-- js link -->
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
