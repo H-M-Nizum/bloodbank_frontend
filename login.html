@@ -11,19 +11,19 @@
     <!-- swiffyslider cdn css link for carousel -->
     <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
 
-    <style>
+  <style>
         body{
-    background-color:white;
-}
-.login-container{
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    align-items:center;
-    width:75%;
-    margin: auto;
-}
+          background-color:white;
+        }
+       .login-container{
+            height:100vh;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items:center;
+            width:75%;
+            margin: auto;
+        }
 .input{
     padding: 15px 25px;
     border: none;
@@ -41,7 +41,7 @@
     font-size: 20px;
     border-radius: 10px;
 }
-    </style>
+</style>
 
   </head>
   
@@ -71,14 +71,16 @@
                     <a class="nav-link text-white" href="contact_us.html" >Contact_us</a>
                   </li>
                 </ul>
-                <ul class="navbar-nav d-flex">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="registration.html">Signup</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="login.html">login</a>
-                    </li>
-                </ul>
+                <div class="auth_class" style="display: inline;" id="sign">
+                  <ul  class="navbar-nav d-flex" >
+                      <li class="nav-item">
+                          <a style="display: inline;" id="signup" class="nav-link text-white" href="registration.html">Signup</a>
+                      </li>
+                      <li class="nav-item">
+                          <a style="display: inline;" id="login" class="nav-link text-white" href="login.html">login</a>
+                      </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </nav>

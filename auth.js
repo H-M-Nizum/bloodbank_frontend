@@ -38,6 +38,7 @@ const handleRegistration = (event) => {
               .then((res) => res.json())
               .then((data) => {
                 console.log(data)
+                window.location.href = "login.html";
                 Swal.fire({
                     title: "Congrate",
                     text: data,
@@ -81,6 +82,9 @@ const handleLogin = (event) => {
             console.log('hi')
             window.location.href = "index.html";
             console.log('hi1')
+            console.log(document.getElementsByClassName("auth_class").innerHTML)
+
+            document.getElementsByClassName("auth_class").style.display = "none"
           }
           else {
             // Handle unsuccessful login, e.g., display an error message
