@@ -102,7 +102,7 @@ const loaddonation = () => {
       bloodgroup: bloodgroup,
       age: parseInt(age),
       unit: parseInt(unit),
-      donor: 2,
+      donor: donor_id,
     };
     console.log(donationData)
 
@@ -233,3 +233,112 @@ const getanddisplaystock = () => {
 }
 
 getanddisplaystock()
+
+// ######################### Blood request #################
+
+const loadbloodrequest = () => {
+  // Get values from form
+  const bloodgroup = document.getElementById('bloodgroup').value;
+  const patient_name = document.getElementById('patient_name').value;
+  const patient_age = document.getElementById('patient_age').value;
+  const reason = document.getElementById('reason').value;
+  const unit = document.getElementById('unit').value;
+  const request_by_patient_id = localStorage.getItem("user_id");
+  console.log(request_by_patient_id)
+  // Prepare data for the POST request
+  const requestData = {
+    bloodgroup: bloodgroup,
+    patient_name : patient_name,
+    reason : reason,
+    patient_age: parseInt(patient_age),
+    unit: parseInt(unit),
+    request_by_patient: request_by_patient_id,
+  };
+  console.log(requestData)
+
+  fetch('https://lifesafe-bank.onrender.com/blood/requestlist/', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(requestData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Success:', data);
+      Swal.fire({
+        title: "Congrate",
+        text: 'Successfully donate blood',
+        icon: "success",
+        confirmButtonText: 'ok'
+      });
+      // update stock unit
+      let blood_id = 1
+      if(data.bloodgroup == "A+" || data.bloodgroup=="a+"){
+        blood_id = 1
+      }
+      else if(data.bloodgroup == "A-" || data.bloodgroup=="a-"){
+        blood_id = 2
+      }
+      else if(data.bloodgroup == "B+" || data.bloodgroup=="b+"){
+        blood_id = 3
+      }
+      else if(data.bloodgroup == "B-" || data.bloodgroup=="b-"){
+        blood_id = 4
+      }
+      else if(data.bloodgroup == "O+" || data.bloodgroup=="o+"){
+        blood_id = 5
+      }
+      else if(data.bloodgroup == "O-" || data.bloodgroup=="o-"){
+        blood_id = 6
+      }
+      else if(data.bloodgroup == "AB+" || data.bloodgroup=="AB-"){
+        blood_id = 7
+      }
+      else if(data.bloodgroup == "AB-" || data.bloodgroup=="ab-"){
+        blood_id = 8
+      }
+
+      // Specify the updated data
+   
+
+      // get particular  blood group previous blood unit
+      fetch(`https://lifesafe-bank.onrender.com/blood/list/${blood_id}/`)
+        .then((res) => res.json())
+        .then((data) => {
+          const updatedData = {
+            unit : data.unit - requestData.unit
+          }
+           // Make a PATCH request to update the data
+          fetch(`https://lifesafe-bank.onrender.com/blood/list/${blood_id}/`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                // Add any other headers if required (e.g., authorization headers)
+            },
+            body: JSON.stringify(updatedData)
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+            })
+          .then(data => {
+            // Handle the updated data
+            console.log('Updated data:', data);
+          })
+          .catch(error => {
+          // Handle errors
+          console.error('Error updating data:', error);
+        });
+
+      })
+      .catch((err) => console.log(err))
+        
+     
+      // window.location.href = "index.html";
+
+    })
+  .catch((error) => {
+  console.error('Error:', error);
+});
+};

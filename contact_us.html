@@ -53,44 +53,87 @@
     </style>
   </head>
 <body>
-     <!-- navbar section start -->
-    <section class="">
-        <nav  class="navbar navbar-expand-lg fixed-top mb-5 ">
-            <div class="container-fluid ">
-              <div class="d-flex align-items-center gap-1 ms-5">
-                <div><img style="width: 60px; height: 60px; border-radius: 30px; box-shadow: 0 4px 8px 0 rgba(250, 249, 249, 0.726), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="img/logo.jpg" alt="logo"></div>
-                <div><h1 style="font-family: Stencil Std, fantasy;" class="navbar-brand text-white">Lifesafe Bank</h1></div>
-              </div>
+ <!-- navbar section start -->
+ <section class=" mb-5 pb-5 pe-5">
+    <nav  class="navbar navbar-expand-lg fixed-top mb-5 pe-5">
+        <div class="container-fluid pe-3">
+          <div class="d-flex align-items-center gap-1 ms-5">
+            <div><img style="width: 60px; height: 60px; border-radius: 30px; box-shadow: 0 4px 8px 0 rgba(250, 249, 249, 0.726), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="img/logo.jpg" alt="logo"></div>
+            <div><h1 style="font-family: Stencil Std, fantasy;" class="navbar-brand text-white">Lifesafe Bank</h1></div>
+          </div>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navbar-toggler-icon-white"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">About</a>
+              </li>
+           
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="blood_donate.html">Blood_Donate</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="blood_stock.html">Blood_Storage</a>
+                </li>
+                <li class="nav-item" >
+                  <a class="nav-link text-white" href="blood_request.html">Blood_Request</a>
+                </li>
+       
               
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon navbar-toggler-icon-white"></span>
-            </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="contact_us.html" >Contact_us</a>
+              </li>
+            </ul>
+            <div class="auth_class" style="display: inline;">
+              <ul  class="navbar-nav d-flex" >
                   <li class="nav-item">
-                    <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
+                      <a style="display: inline;" id="signup" class="nav-link text-white" href="registration.html">Signup</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-white" href="#">About</a>
+                      <a style="display: inline;" id="login" class="nav-link text-white" href="login.html">Signin</a>
                   </li>
-                  
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="contact_us.html" >Contact_us</a>
-                  </li>
-                </ul>
-                <ul class="navbar-nav d-flex">
-                    <li class="nav-item">
-                        <a id="signup" class="nav-link text-white" href="registration.html">Signup</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="login.html">login</a>
-                    </li>
-                </ul>
-              </div>
+              </ul>
             </div>
-          </nav>
-    </section>
-    <!-- navbar section end -->
+          </div>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Profile
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-dark"
+              aria-labelledby="dropdownMenuButton2"
+            >
+              <li>
+                <a class="dropdown-item active" href="#"
+                  >Profile</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="blood_stock.html"
+                  >Blood</a
+                >
+              </li>
+              <li onclick="handlelogOut()">
+                <button class="dropdown-item">Logout</button>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+</section>
+<!-- navbar section end -->
 
 
     <div class="container p-5">
@@ -143,7 +186,107 @@
     </div>
 
 
+        <!----------------------- Footer section start ----------------------->
 
+    <footer class="main-footer p-5">
+      <!--Footer Upper-->
+      <!--Footer Lower-->
+      <div class="footer-lower">
+        <div class="auto-container sitemap">
+          <div class="row clearfix">
+            <div class='col-md-3 col-sm-12 col-xs-12  wow bounceInLeft'>
+              <h3 class='text-left'>Looking for Blood</h3>
+              <ul style='line-height:165%; list-style: none;'>
+                <li><a  href='blood_stock.html'>Blood Availability</a></li>
+                <li><a  href='blood_donate.html'>Blood Bank Directory</a></li>
+                <li><a  href='blood_request.html'>Blood Request</a></li>
+              </ul>
+            </div>
+            <div class='col-md-3 col-sm-12 col-xs-12  wow bounceInLeft'>
+              <h3 class='text-left'>Want to Donate Blood</h3>
+              <ul style='line-height:165%; list-style: none;'>
+                <li><a  href='#'>Blood Donation Camps</a></li>
+                <li><a  href='#'>Donor</a></li>
+                <li style="display: none;"><a href="#">Voluntary Donor Group</a></li>
+                <li><a  href='#'>About Blood Donation</a></li>
+                <li><a  href="#" title="Register VBD Camp"
+                    href="#">Register VBD Camp</a></li>
+
+
+              </ul>
+            </div>
+            <div class='col-md-3 col-sm-12 col-xs-12  wow bounceInLeft'>
+              <h3 class='text-left'>Blood Bank Login</h3>
+              <ul style='line-height:165%; list-style: none;'>
+                <li><a href='login.html'>LifeSafe Login</a></li>
+                <li><a href='#'>Add your Blood Bank</a>
+                </li>
+              </ul>
+            </div>
+            <div class='col-md-3 col-sm-12 col-xs-12  wow bounceInLeft'>
+              <h3 class='text-left'>About Us</h3>
+              <ul style='line-height:165%; list-style: none;'>
+                <li><a  href='#'>About eRaktkosh</a></li>
+                <li><a  title="All Notifications" href="#">Notifications</a></li>
+                <li><a href='#'>Gallery</a></li>
+                <li><a href="#" title="Video gallery">Video Gallery</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="#" title="Mobile Apps">Mobile Apps</a></li>
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="">
+            <div class="row clearfix ps-5 pe-5 pt-5">
+              <!--Footer Logo-->
+              <div class="col-md-3 col-sm-6 col-xs-12 footer-logo wow bounceInLeft text-center" data-wow-delay="200ms"
+                data-wow-duration="1500ms">
+                <div class='col-md-12 col-xs-12'> <a rel="noopener" href="http://www.mohfw.gov.bd/" target='_blank'> <img
+                      src="img/hm6.png" style='float:left; width: 200px;'
+                      alt="Ministry of health and family welfare"></a></div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 col-xs-12 footer-logo wow bounceInRight text-center"
+                data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class='col-md-12 col-xs-12'> <a href='https://bangladesh.gov.bd/index.php' target='_blank' rel="noopener"> <img
+                      src="img/hm4.jpg" style="width: 120px; height: 120px; border-radius: 60px;"  alt="National Portal of Bangladesh"></a></div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 col-xs-12 footer-logo wow bounceInBottom text-center"
+                data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class='col-md-12 col-xs-12'>
+                  <a href='https://dghs.gov.bd/' target='_blank' rel="noopener">
+                    <img style="width: 120px;height: 120px; border-radius: 60px;" src="img/hm3.jpg"
+                      alt="National Health Portal"></a>
+                </div>
+              </div>
+
+
+              <div class="col-md-3 col-sm-6 col-xs-12 footer-logo wow bounceInRight text-center"
+                data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class='col-md-12 col-xs-12'><a href='https://bdrcs.org/donate-blood/' target='_blank' rel="noopener"></a> <img
+                    src="img/hm5.png" style="height: 120px; width: 120px; border-radius: 60px;" alt="Red Crescent"></div>
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <hr>
+            <div class="row">
+              <div class="col-lg-6 col-md-12 text-center m-auto">
+                  <div style="color: #999999;" class="copyright_conent">
+                      <p>Copyright © 2023 <a id="Life" href="https://github.com/H-M-Nizum">H.M.NIZUM</a>. All Right Reserved.</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+    <!----------------------- Footer section end ----------------------->
 
 
    <script src="app.js"></script>

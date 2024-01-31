@@ -78,17 +78,26 @@ const handleLogin = (event) => {
         //   save token and user id in local storage
           if (data.token && data.úser_id) {
             localStorage.setItem("token", data.token);
-            localStorage.setItem("user_id", data.user_id);
+            localStorage.setItem("user_id", data.úser_id);
             console.log('hi')
-            window.location.href = "index.html";
+            // window.location.href = "index.html";
             console.log('hi1')
-            console.log(document.getElementsByClassName("auth_class").innerHTML)
+            // console.log(document.getElementsByClassName("auth_class").innerHTML)
 
+            document.getElementsByClassName("auth_class").style.display = ""
             document.getElementsByClassName("auth_class").style.display = "none"
           }
           else {
             // Handle unsuccessful login, e.g., display an error message
             console.error("Login failed. Invalid credentials.");
+            Swal.fire({
+              title: "Oops...",
+              text: "Login failed. Invalid credentials. registration Please",
+              icon: "error",
+              confirmButtonText: 'ok'
+            });
+            // window.location.href = "registration.html";
+
         }
         });
     }
@@ -109,6 +118,7 @@ const handleLogin = (event) => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        console.log('success logout')
         localStorage.removeItem("token");
         localStorage.removeItem("user_id");
       });
