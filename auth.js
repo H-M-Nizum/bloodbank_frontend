@@ -80,7 +80,7 @@ const handleLogin = (event) => {
             localStorage.setItem("token", data.token);
             localStorage.setItem("user_id", data.úser_id);
             console.log('hi')
-            // window.location.href = "index.html";
+            window.location.href = "index.html";
             console.log('hi1')
             // console.log(document.getElementsByClassName("auth_class").innerHTML)
 
